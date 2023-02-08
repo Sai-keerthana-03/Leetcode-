@@ -1,0 +1,54 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+public class Solution {
+
+    /*
+     * Complete the 'countApplesAndOranges' function below.
+     *
+     * The function accepts following parameters:
+     *  1. INTEGER s
+     *  2. INTEGER t
+     *  3. INTEGER a
+     *  4. INTEGER b
+     *  5. INTEGER_ARRAY apples
+     *  6. INTEGER_ARRAY oranges
+     */
+public static void main(String[] args){
+    Scanner Scan = new Scanner(System.in);
+    int s = Scan.nextInt();
+    int t = Scan.nextInt();
+    int a = Scan.nextInt();
+    int b = Scan.nextInt();
+    int m = Scan.nextInt();
+    int n = Scan.nextInt();
+    int [] apples = new int[m];
+    int mcount = 0;
+    for (int i=0;i<m;i++){
+    apples[i]=Scan.nextInt(); 
+        if (apples[i]+a>=s && apples[i]+a<=t){
+            mcount++;
+        }
+    }
+    int [] oranges = new int[n];
+    int ncount=0;
+    for(int j=0;j<n;j++){
+        oranges[j]=Scan.nextInt();
+        if(oranges[j]+b>=s && oranges[j]+b<=t){
+            ncount++;
+        }
+    }
+    System.out.println(mcount);
+    System.out.println(ncount);
+    
+}
+}
