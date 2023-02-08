@@ -1,0 +1,23 @@
+def timeConversion(s):
+    if s[8:10]=="AM":
+        if s[0:2]=="12":
+            return str("00"+s[2:8])
+        else:
+            return str(s[0:8])
+    if s[8:10]=="PM":
+        if s[0:2]=="12":
+            return str(s[0:8])
+        else:
+            a = int(s[0:2])+12
+            return str(str(a)+ s[2:8])
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = timeConversion(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
