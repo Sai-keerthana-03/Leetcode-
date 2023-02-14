@@ -1,0 +1,29 @@
+class Result {
+
+    /*
+     * Complete the 'pageCount' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER p
+     */
+
+    public static int pageCount(int n, int p) {
+    // Write your code here
+    if((n-p) < p){
+        if(n == p+1 && n%2==0){
+            return 1;
+        }
+        if(n==p+1 && n%2 !=0){
+            return 0;
+        }
+        else{
+            return (n-p)/2;
+        }
+    }
+    else{
+        return p/2;
+    }
+    }
+}
